@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AssetX — سوق الأصول بين الشركات</title>
+<meta name="description" content="AssetX: سوق B2B في مصر للشركات اللي بتبيع أصولها الفائضة والمستعملة، وللستارت أب اللي محتاجة معدات بسعر أقل.">
+<meta name="theme-color" content="#0B1220">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/ax-app-icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script>
+  // Apply saved language/theme before first paint (no flash).
+  (function () {
+    var d = document.documentElement;
+    try {
+      var lang = localStorage.getItem('ax-lang');
+      if (lang === 'en') { d.lang = 'en'; d.dir = 'ltr'; }
+      var theme = localStorage.getItem('ax-theme') ||
+        (window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      d.setAttribute('data-theme', theme);
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="bg-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<!-- ============ Header ============ -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="brand" aria-label="AssetX">
+      <img class="logo-light" src="assets/ax-logo-horizontal.svg" alt="AssetX" width="160" height="40">
+      <img class="logo-dark" src="assets/ax-logo-horizontal-dark.svg" alt="AssetX" width="160" height="40">
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#story" data-i18n="nav.story">الحكاية</a>
+      <a href="#who" data-i18n="nav.who">لمين</a>
+      <a href="#how" data-i18n="nav.how">إزاي بنبيع</a>
+      <a href="#value" data-i18n="nav.value">القيمة</a>
+      <a href="#contact" data-i18n="nav.contact">تواصل</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn lang-toggle" type="button" data-action="lang" aria-label="Switch language">
+        <span data-i18n="ui.langShort">EN</span>
+      </button>
+      <button class="icon-btn" type="button" data-action="theme" aria-label="Toggle dark mode">
+        <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.2 4.2l1.6 1.6M18.2 18.2l1.6 1.6M2 12h2.2M19.8 12H22M4.2 19.8l1.6-1.6M18.2 5.8l1.6-1.6"/></svg>
+      </button>
+      <a class="btn btn-primary btn-sm hide-sm" href="#contact" data-i18n="cta.join">انضم للبايلوت</a>
+      <button class="icon-btn burger" type="button" data-action="menu" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ Hero ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow reveal"><span class="dot"></span><span data-i18n="hero.eyebrow">سوق B2B للأصول الفائضة والمستعملة — مصر</span></p>
+      <h1 class="reveal" data-i18n="hero.title">كل أصل في شركتك <span class="grad">يستاهل حياة تانية</span></h1>
+      <p class="lead reveal" data-i18n="hero.lead">المكاتب اللي اتجددت، والأجهزة اللي اتغيرت، والمعدات اللي خلص دورها… عند شركة تانية لسه بداية الحكاية. AssetX بيوصّل الأصول دي من الشركات اللي مش محتاجاها للشركات اللي بتدوّر عليها.</p>
+      <div class="hero-ctas reveal">
+        <a class="btn btn-primary js-wa" href="#" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+          <span data-i18n="cta.whatsapp">كلّمنا على واتساب</span>
+        </a>
+        <a class="btn btn-ghost" href="#how" data-i18n="cta.how">شوف إزاي بيشتغل</a>
+      </div>
+      <ul class="hero-stats reveal">
+        <li><strong><span class="count" data-to="0">0</span>%</strong><span data-i18n="stats.commission">عمولة للشركات الأولى</span></li>
+        <li><strong class="count" data-to="3">3</strong><span data-i18n="stats.models">طرق للبيع والشراء</span></li>
+        <li><strong><span class="count" data-to="100">100</span>%</strong><span data-i18n="stats.verified">شركات متراجعة وموثقة</span></li>
+      </ul>
+    </div>
+
+    <div class="hero-stage reveal" aria-hidden="true">
+      <svg class="journey" viewBox="0 0 400 400" preserveAspectRatio="none">
+        <path d="M40 330 C 120 300, 110 180, 200 190 S 300 90, 360 60" />
+      </svg>
+      <div class="stage-core">
+        <img class="logo-light" src="assets/ax-icon.svg" alt="">
+        <img class="logo-dark" src="assets/ax-icon-dark.svg" alt="">
+      </div>
+      <div class="asset-card c1">
+        <div class="ac-icon"><svg viewBox="0 0 24 24"><path d="M3 10h18M5 10v9M19 10v9M7 10V6h10v4M9 14h6"/></svg></div>
+        <div><b data-i18n="card.desk">مكاتب إدارية ×12</b><small data-i18n="card.deskMeta">بعد تجديد مقر</small></div>
+        <span class="tag tag-green" data-i18n="tag.sold">اتباع</span>
+      </div>
+      <div class="asset-card c2">
+        <div class="ac-icon"><svg viewBox="0 0 24 24"><rect x="4" y="3" width="16" height="6" rx="1.5"/><rect x="4" y="11" width="16" height="6" rx="1.5"/><path d="M8 6h.01M8 14h.01M8 21h8"/></svg></div>
+        <div><b data-i18n="card.server">سيرفرات وشبكات</b><small data-i18n="card.serverMeta">مزاد · فاضل 2 يوم</small></div>
+        <span class="tag tag-blue">+5%</span>
+      </div>
+      <div class="asset-card c3">
+        <div class="ac-icon"><svg viewBox="0 0 24 24"><path d="M5 8h11v6a5 5 0 0 1-5 5h-1a5 5 0 0 1-5-5V8zM16 10h1.5a2.5 2.5 0 0 1 0 5H16M8 3v2M11 3v2"/></svg></div>
+        <div><b data-i18n="card.coffee">ماكينة قهوة تجاري</b><small data-i18n="card.coffeeMeta">سعر ثابت</small></div>
+        <span class="tag tag-ink">-40%</span>
+      </div>
+      <div class="asset-card c4">
+        <div class="ac-icon"><svg viewBox="0 0 24 24"><path d="M3 17V9h7l3 4v4M13 17h4M17 4v13M17 13h4M6 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM12 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg></div>
+        <div><b data-i18n="card.forklift">معدات مخازن</b><small data-i18n="card.forkliftMeta">طلب عرض سعر · 4 عروض</small></div>
+        <span class="tag tag-verified"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 2.1 3.2-.3.9 3.1 2.8 1.6-1.2 3 1.2 3-2.8 1.6-.9 3.1-3.2-.3L12 22l-2.4-2.1-3.2.3-.9-3.1-2.8-1.6 1.2-3-1.2-3 2.8-1.6.9-3.1 3.2.3z"/><path d="M8.5 12l2.3 2.3 4.7-4.6" fill="none"/></svg><span data-i18n="tag.verified">موثقة</span></span>
+      </div>
+    </div>
+  </div>
+  <a href="#story" class="scroll-cue" aria-label="Scroll"><span></span></a>
+</section>
+
+<!-- ============ Two stories (problem) ============ -->
+<section class="section" id="story">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="kicker" data-i18n="story.kicker">الحكاية</p>
+      <h2 data-i18n="story.title">شركتين، مشكلتين… <span class="grad">وحل واحد</span></h2>
+    </header>
+    <div class="stories">
+      <article class="story-card reveal">
+        <span class="story-num">01</span>
+        <div class="story-ico"><svg viewBox="0 0 24 24"><path d="M3 21V8l9-5 9 5v13M7 21v-7h10v7M7 17h10"/></svg></div>
+        <h3 data-i18n="story.aTitle">شركة بتجدد</h3>
+        <p data-i18n="story.aText">نقلت مقرها أو غيّرت أجهزتها، وفاضل عندها مخزن مليان مكاتب وكراسي وأجهزة ومعدات شغالة كويس… بس واقفة. بتاخد مساحة، وبتخسر من قيمتها كل يوم، والسماسرة بيعرضوا ملاليم.</p>
+      </article>
+      <div class="story-bridge reveal" aria-hidden="true">
+        <div class="bridge-line"></div>
+        <div class="bridge-core">
+          <img class="logo-light" src="assets/ax-icon.svg" alt="">
+          <img class="logo-dark" src="assets/ax-icon-dark.svg" alt="">
+        </div>
+        <div class="bridge-line"></div>
+      </div>
+      <article class="story-card reveal">
+        <span class="story-num">02</span>
+        <div class="story-ico"><svg viewBox="0 0 24 24"><path d="M12 2c3 2 5 5.5 5 9.5L15 16H9l-2-4.5C7 7.5 9 4 12 2zM9 16l-2 4h4M15 16l2 4h-4M12 9.5h.01"/></svg></div>
+        <h3 data-i18n="story.bTitle">ستارت أب لسه بادئة</h3>
+        <p data-i18n="story.bText">محتاجة تجهّز مكتب وتشتري أجهزة ومعدات عشان تبدأ، بس الميزانية محدودة والجديد غالي، ومش عارفة تثق في مين تشتري منه مستعمل.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ About ============ -->
+<section class="section about">
+  <div class="container">
+    <p class="kicker reveal" data-i18n="about.kicker">إحنا مين</p>
+    <p class="statement reveal" data-i18n="about.statement">AssetX هو <mark>سوق B2B</mark> بيجمع الشركات اللي عندها <mark>أصول فائضة أو مستعملة</mark> مع الشركات اللي محتاجاها — في مكان واحد <mark>منظم وموثوق</mark>، بدل الاعتماد على السماسرة والمعارف والجروبات.</p>
+    <div class="about-grid">
+      <div class="about-item reveal">
+        <h3 data-i18n="about.doTitle">بنعمل إيه</h3>
+        <p data-i18n="about.doText">بنخلّي الشركات تعرض أصولها بسعر ثابت أو في مزاد، وتنشر طلباتها وتستقبل عروض أسعار — مع توثيق للشركات ومتابعة لكل خطوة في الصفقة.</p>
+      </div>
+      <div class="about-item reveal">
+        <h3 data-i18n="about.missionTitle">رسالتنا</h3>
+        <p data-i18n="about.missionText">إن مفيش أصل يتركن وهو لسه بيشتغل، وإن أي شركة ناشئة تقدر تبدأ بمعدات كويسة من غير ما تدفع تمن الجديد.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Who it's for ============ -->
+<section class="section" id="who">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="kicker" data-i18n="who.kicker">بنستهدف مين</p>
+      <h2 data-i18n="who.title">جانبين للسوق، <span class="grad">ومكسب للاتنين</span></h2>
+    </header>
+    <div class="audience">
+      <article class="aud-card aud-sell reveal">
+        <span class="aud-badge" data-i18n="who.sellBadge">بيبيعوا</span>
+        <h3 data-i18n="who.sellTitle">الشركات اللي بتجدد أو بتكبر أو بتنقل</h3>
+        <ul>
+          <li data-i18n="who.sell1">تحويل الأصول الواقفة لكاش</li>
+          <li data-i18n="who.sell2">تفضية المخازن والمساحات</li>
+          <li data-i18n="who.sell3">الوصول لمشترين جادين وموثقين</li>
+        </ul>
+      </article>
+      <article class="aud-card aud-buy reveal">
+        <span class="aud-badge" data-i18n="who.buyBadge">بيشتروا</span>
+        <h3 data-i18n="who.buyTitle">الستارت أب والشركات الصغيرة والمتوسطة</h3>
+        <ul>
+          <li data-i18n="who.buy1">معدات كويسة بأقل من سعر الجديد</li>
+          <li data-i18n="who.buy2">بائعين شركات متراجعة، مش أفراد مجهولين</li>
+          <li data-i18n="who.buy3">ينشروا اللي محتاجينه والعروض تيجي لهم</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+  <div class="marquee" aria-label="Asset categories">
+    <div class="marquee-track">
+      <span data-i18n="cat.furniture">أثاث مكتبي</span><span data-i18n="cat.it">أجهزة وإلكترونيات</span><span data-i18n="cat.machinery">ماكينات ومعدات</span><span data-i18n="cat.kitchen">معدات مطابخ ومطاعم</span><span data-i18n="cat.fitout">تجهيزات وديكور</span><span data-i18n="cat.warehouse">معدات مخازن</span><span data-i18n="cat.medical">أجهزة طبية</span><span data-i18n="cat.vehicles">مركبات تجارية</span>
+      <span data-i18n="cat.furniture" aria-hidden="true">أثاث مكتبي</span><span data-i18n="cat.it" aria-hidden="true">أجهزة وإلكترونيات</span><span data-i18n="cat.machinery" aria-hidden="true">ماكينات ومعدات</span><span data-i18n="cat.kitchen" aria-hidden="true">معدات مطابخ ومطاعم</span><span data-i18n="cat.fitout" aria-hidden="true">تجهيزات وديكور</span><span data-i18n="cat.warehouse" aria-hidden="true">معدات مخازن</span><span data-i18n="cat.medical" aria-hidden="true">أجهزة طبية</span><span data-i18n="cat.vehicles" aria-hidden="true">مركبات تجارية</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ How it trades ============ -->
+<section class="section" id="how">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="kicker" data-i18n="how.kicker">إزاي بنبيع</p>
+      <h2 data-i18n="how.title">تلات طرق… <span class="grad">اختار اللي يناسب الأصل</span></h2>
+    </header>
+    <div class="tabs reveal" role="tablist">
+      <button class="tab is-active" role="tab" aria-selected="true" aria-controls="p-fixed" id="t-fixed" data-tab="fixed"><span class="tab-n">01</span><span data-i18n="how.fixed">سعر ثابت</span></button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-auction" id="t-auction" data-tab="auction"><span class="tab-n">02</span><span data-i18n="how.auction">مزاد</span></button>
+      <button class="tab" role="tab" aria-selected="false" aria-controls="p-rfq" id="t-rfq" data-tab="rfq"><span class="tab-n">03</span><span data-i18n="how.rfq">طلب عرض سعر</span></button>
+    </div>
+
+    <div class="panels reveal">
+      <div class="panel is-active" role="tabpanel" id="p-fixed" aria-labelledby="t-fixed">
+        <div class="panel-copy">
+          <h3 data-i18n="how.fixedTitle">اعرض بسعرك، واقفل الصفقة</h3>
+          <p data-i18n="how.fixedText">البائع بيحدد السعر، والمشتري بيأكد الشراء. الأصل بيتحجز ليه، والصفقة بتمشي خطوة بخطوة لحد تأكيد الاستلام.</p>
+          <ol class="steps">
+            <li data-i18n="how.fixed1">اعرض الأصل بالصور والحالة والسعر</li>
+            <li data-i18n="how.fixed2">المشتري يأكد ويتحجز الأصل</li>
+            <li data-i18n="how.fixed3">التسليم وتأكيد الاستلام</li>
+          </ol>
+        </div>
+        <div class="mock mock-fixed" aria-hidden="true">
+          <div class="mock-row"><span class="mock-thumb"></span><div><b data-i18n="mock.fixedItem">كراسي اجتماعات ×20</b><small data-i18n="mock.fixedCond">حالة ممتازة</small></div></div>
+          <div class="price"><span class="old" data-i18n="mock.oldPrice">٣٦٬٠٠٠ ج.م</span><span class="new" data-i18n="mock.newPrice">١٨٬٥٠٠ ج.م</span></div>
+          <div class="mock-status"><span class="pill pill-green" data-i18n="mock.reserved">اتحجز</span><span class="progress"><i></i></span></div>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-auction" aria-labelledby="t-auction" hidden>
+        <div class="panel-copy">
+          <h3 data-i18n="how.auctionTitle">سيب السوق يحدد السعر</h3>
+          <p data-i18n="how.auctionText">مزاد بوقت محدد، والمشترين الموثقين بيزايدوا. أعلى عرض بيكسب، والمزاد بيقفل تلقائي في ميعاده.</p>
+          <ol class="steps">
+            <li data-i18n="how.auction1">حدد سعر البداية والحد الأدنى للزيادة</li>
+            <li data-i18n="how.auction2">المزايدة بعربون مسترد</li>
+            <li data-i18n="how.auction3">أعلى عرض يكسب ويكمل الصفقة</li>
+          </ol>
+        </div>
+        <div class="mock mock-auction" aria-hidden="true">
+          <div class="mock-row"><span class="mock-thumb blue"></span><div><b data-i18n="mock.auctionItem">رفّ سيرفرات كامل</b><small class="timer">02:14:37</small></div></div>
+          <ul class="bids">
+            <li><span data-i18n="mock.bidder3">شركة ٣</span><b data-i18n="mock.bid3">٩٢٬٠٠٠</b></li>
+            <li><span data-i18n="mock.bidder2">شركة ٢</span><b data-i18n="mock.bid2">٨٨٬٠٠٠</b></li>
+            <li><span data-i18n="mock.bidder1">شركة ١</span><b data-i18n="mock.bid1">٨٥٬٠٠٠</b></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel" role="tabpanel" id="p-rfq" aria-labelledby="t-rfq" hidden>
+        <div class="panel-copy">
+          <h3 data-i18n="how.rfqTitle">قول محتاج إيه، والعروض تجيلك</h3>
+          <p data-i18n="how.rfqText">المشتري بينشر طلبه بالمواصفات والميعاد، والبائعين بيقدموا عروضهم. قارن واختار الأنسب.</p>
+          <ol class="steps">
+            <li data-i18n="how.rfq1">انشر طلبك بالمواصفات وآخر ميعاد</li>
+            <li data-i18n="how.rfq2">استقبل عروض من شركات بايعة</li>
+            <li data-i18n="how.rfq3">قارن واختار العرض الأفضل</li>
+          </ol>
+        </div>
+        <div class="mock mock-rfq" aria-hidden="true">
+          <div class="rfq-need"><small data-i18n="mock.need">مطلوب</small><b data-i18n="mock.needItem">٣٠ لابتوب للفريق الجديد</b></div>
+          <div class="quote q1"><span data-i18n="mock.q1">عرض من شركة أ</span><b data-i18n="mock.q1p">٤٢٠ ألف</b></div>
+          <div class="quote q2 best"><span data-i18n="mock.q2">عرض من شركة ب</span><b data-i18n="mock.q2p">٣٨٥ ألف</b></div>
+          <div class="quote q3"><span data-i18n="mock.q3">عرض من شركة ج</span><b data-i18n="mock.q3p">٤٠٥ ألف</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Value ============ -->
+<section class="section" id="value">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="kicker" data-i18n="value.kicker">القيمة اللي بنقدمها</p>
+      <h2 data-i18n="value.title">أكتر من مجرد <span class="grad">بيع وشرا</span></h2>
+    </header>
+    <div class="values">
+      <div class="value reveal"><div class="v-ico"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg></div><h3 data-i18n="value.v1t">قيمة من الواقف</h3><p data-i18n="value.v1">الأصول اللي في المخزن تتحول لفلوس بدل ما تفقد قيمتها.</p></div>
+      <div class="value reveal"><div class="v-ico"><svg viewBox="0 0 24 24"><path d="M20 12V8H6a2 2 0 0 1 0-4h12v4M4 6v12a2 2 0 0 0 2 2h14v-4M18 12a2 2 0 0 0 0 4h4v-4z"/></svg></div><h3 data-i18n="value.v2t">توفير حقيقي</h3><p data-i18n="value.v2">جهّز شركتك بمعدات كويسة بجزء من تمن الجديد.</p></div>
+      <div class="value reveal"><div class="v-ico"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-4.5"/></svg></div><h3 data-i18n="value.v3t">شركات موثقة</h3><p data-i18n="value.v3">كل شركة بتتراجع قبل ما تبيع أو تشتري.</p></div>
+      <div class="value reveal"><div class="v-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></div><h3 data-i18n="value.v4t">متابعة شفافة</h3><p data-i18n="value.v4">اعرف كل صفقة واقفة فين، والخطوة الجاية إيه.</p></div>
+      <div class="value reveal"><div class="v-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="18" r="2"/><path d="M6 7l4 3.5M18 7l-4 3.5M6 17l4-3.5M18 17l-4-3.5"/></svg></div><h3 data-i18n="value.v5t">مكان واحد</h3><p data-i18n="value.v5">بدل السماسرة والجروبات والمعارف — سوق واحد منظم.</p></div>
+      <div class="value reveal"><div class="v-ico"><svg viewBox="0 0 24 24"><path d="M7 19H4.5a2 2 0 0 1-1.7-3l2.6-4.5M12 4.5l1.7-.9a2 2 0 0 1 2.7.8L19 9M17 19h2.5a2 2 0 0 0 1.7-3L20 14M9 7.5L12 4.5l-1 4M3.5 13l2 -1.5 2 1.5M14 19l-2 2 2 2"/><path d="M7 19h10"/></svg></div><h3 data-i18n="value.v6t">استدامة</h3><p data-i18n="value.v6">إعادة استخدام الأصول بدل ما تبقى هالك — أوفر للشركات وأحسن للبيئة.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Trust ============ -->
+<section class="section trust">
+  <div class="container trust-grid">
+    <div class="reveal">
+      <p class="kicker" data-i18n="trust.kicker">الثقة</p>
+      <h2 data-i18n="trust.title">إنت بتتعامل مع <span class="grad">شركة حقيقية</span></h2>
+      <p class="muted" data-i18n="trust.text">كل شركة على AssetX بتعدّي بمراجعة من فريقنا قبل ما تقدر تبيع أو تشتري أو تزايد. والشارة دي بتظهر على صفحتها وكل إعلاناتها.</p>
+      <p class="note" data-i18n="trust.note">التوثيق معناه إن الشركة اتراجعت — مش ضمان لحالة أصل معيّن، فراجع التفاصيل دايماً قبل ما تكمل.</p>
+    </div>
+    <ol class="timeline">
+      <li class="reveal"><span class="t-dot">1</span><div><h3 data-i18n="trust.s1t">سجّل شركتك</h3><p data-i18n="trust.s1">بيانات الشركة وتأكيد الإيميل.</p></div></li>
+      <li class="reveal"><span class="t-dot">2</span><div><h3 data-i18n="trust.s2t">مراجعة الفريق</h3><p data-i18n="trust.s2">بنراجع البيانات ونقبل أو نطلب معلومات أكتر.</p></div></li>
+      <li class="reveal"><span class="t-dot t-badge"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><h3 data-i18n="trust.s3t">شارة موثقة</h3><p data-i18n="trust.s3">تظهر على صفحتك وإعلاناتك، وتفتح لك كل مميزات السوق.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============ Pilot ============ -->
+<section class="section">
+  <div class="container">
+    <div class="pilot reveal">
+      <div class="pilot-big">0<span>%</span></div>
+      <div class="pilot-copy">
+        <p class="kicker light" data-i18n="pilot.kicker">مرحلة البايلوت</p>
+        <h2 data-i18n="pilot.title">أول الشركات اللي تنضم… من غير عمولة</h2>
+        <p data-i18n="pilot.text">بنبدأ بمجموعة شركات مختارة. انضم دلوقتي، اعرض أصولك أو اطلب اللي محتاجه، وساعدنا نبني السوق معاك.</p>
+      </div>
+      <a class="btn btn-light js-wa" href="#" target="_blank" rel="noopener" data-i18n="cta.join">انضم للبايلوت</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Contact ============ -->
+<section class="section" id="contact">
+  <div class="container">
+    <header class="section-head reveal">
+      <p class="kicker" data-i18n="contact.kicker">تواصل معانا</p>
+      <h2 data-i18n="contact.title">عندك أصل واقف؟ <span class="grad">أو محتاج واحد؟</span></h2>
+      <p class="muted" data-i18n="contact.text">ابعتلنا، وهنرد عليك في أقرب وقت.</p>
+    </header>
+    <div class="contacts">
+      <a class="contact-card reveal js-wa" href="#" target="_blank" rel="noopener">
+        <span class="cc-ico wa"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/><path d="M8.5 8.5c.5 2.5 2.5 5 6 6.5l1.5-1.5-2-1-1 1c-1.3-.6-2.4-1.7-3-3l1-1-1-2z"/></svg></span>
+        <span><b data-i18n="contact.wa">واتساب</b><small dir="ltr">+20 101 738 0253</small></span>
+      </a>
+      <a class="contact-card reveal" href="mailto:assetx.business@gmail.com">
+        <span class="cc-ico mail"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span>
+        <span><b data-i18n="contact.email">الإيميل</b><small dir="ltr">assetx.business@gmail.com</small></span>
+      </a>
+      <a class="contact-card reveal" href="https://www.facebook.com/share/1HhPSKYpT8/" target="_blank" rel="noopener">
+        <span class="cc-ico fb"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v8h4v-8h3l1-4h-4V8z"/></svg></span>
+        <span><b data-i18n="contact.fb">فيسبوك</b><small data-i18n="contact.fbHandle">AssetX على فيسبوك</small></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ Footer ============ -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a href="#top" class="brand" aria-label="AssetX">
+      <img class="logo-light" src="assets/ax-logo-horizontal.svg" alt="AssetX" width="140" height="35">
+      <img class="logo-dark" src="assets/ax-logo-horizontal-dark.svg" alt="AssetX" width="140" height="35">
+    </a>
+    <p class="muted" data-i18n="footer.tag">كل أصل يستاهل حياة تانية.</p>
+    <div class="footer-actions">
+      <button class="chip" type="button" data-action="lang"><span data-i18n="ui.langLong">English</span></button>
+      <button class="chip" type="button" data-action="theme"><span data-i18n="ui.theme">الوضع الليلي</span></button>
+    </div>
+    <p class="copy">© <span id="year">2026</span> AssetX · <span data-i18n="footer.rights">كل الحقوق محفوظة</span></p>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
